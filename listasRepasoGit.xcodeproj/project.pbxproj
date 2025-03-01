@@ -16,10 +16,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		E2669B2C2D737E790023A0D6 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		E2669B1C2D737D5C0023A0D6 /* listasRepasoGit */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = listasRepasoGit; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2669B2E2D737E790023A0D6 /* EjTema2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = EjTema2; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -28,10 +38,22 @@
 			path = listasRepasoGit;
 			sourceTree = "<group>";
 		};
+		E2669B2F2D737E790023A0D6 /* EjTema2 */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = EjTema2;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		E2669B192D737D5C0023A0D6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2669B2B2D737E790023A0D6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -45,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				E2669B1E2D737D5C0023A0D6 /* listasRepasoGit */,
+				E2669B2F2D737E790023A0D6 /* EjTema2 */,
 				E2669B1D2D737D5C0023A0D6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				E2669B1C2D737D5C0023A0D6 /* listasRepasoGit */,
+				E2669B2E2D737E790023A0D6 /* EjTema2 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -82,6 +106,28 @@
 			productReference = E2669B1C2D737D5C0023A0D6 /* listasRepasoGit */;
 			productType = "com.apple.product-type.tool";
 		};
+		E2669B2D2D737E790023A0D6 /* EjTema2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2669B322D737E790023A0D6 /* Build configuration list for PBXNativeTarget "EjTema2" */;
+			buildPhases = (
+				E2669B2A2D737E790023A0D6 /* Sources */,
+				E2669B2B2D737E790023A0D6 /* Frameworks */,
+				E2669B2C2D737E790023A0D6 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				E2669B2F2D737E790023A0D6 /* EjTema2 */,
+			);
+			name = EjTema2;
+			packageProductDependencies = (
+			);
+			productName = EjTema2;
+			productReference = E2669B2E2D737E790023A0D6 /* EjTema2 */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -92,6 +138,9 @@
 				LastUpgradeCheck = 1620;
 				TargetAttributes = {
 					E2669B1B2D737D5C0023A0D6 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					E2669B2D2D737E790023A0D6 = {
 						CreatedOnToolsVersion = 16.2;
 					};
 				};
@@ -111,12 +160,20 @@
 			projectRoot = "";
 			targets = (
 				E2669B1B2D737D5C0023A0D6 /* listasRepasoGit */,
+				E2669B2D2D737E790023A0D6 /* EjTema2 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E2669B182D737D5C0023A0D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2669B2A2D737E790023A0D6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -257,6 +314,22 @@
 			};
 			name = Release;
 		};
+		E2669B332D737E790023A0D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E2669B342D737E790023A0D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -274,6 +347,15 @@
 			buildConfigurations = (
 				E2669B242D737D5C0023A0D6 /* Debug */,
 				E2669B252D737D5C0023A0D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2669B322D737E790023A0D6 /* Build configuration list for PBXNativeTarget "EjTema2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2669B332D737E790023A0D6 /* Debug */,
+				E2669B342D737E790023A0D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
