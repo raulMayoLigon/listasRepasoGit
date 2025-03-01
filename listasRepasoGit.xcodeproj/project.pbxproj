@@ -30,6 +30,7 @@
 /* Begin PBXFileReference section */
 		E2669B1C2D737D5C0023A0D6 /* listasRepasoGit */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = listasRepasoGit; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2669B2E2D737E790023A0D6 /* EjTema2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = EjTema2; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2669B352D7380180023A0D6 /* CMakeLists.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -66,6 +67,7 @@
 		E2669B132D737D5C0023A0D6 = {
 			isa = PBXGroup;
 			children = (
+				E2669B352D7380180023A0D6 /* CMakeLists.txt */,
 				E2669B1E2D737D5C0023A0D6 /* listasRepasoGit */,
 				E2669B2F2D737E790023A0D6 /* EjTema2 */,
 				E2669B1D2D737D5C0023A0D6 /* Products */,
