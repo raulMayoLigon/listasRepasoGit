@@ -18,17 +18,22 @@ int contarNodos(struct tipoNodo *primero);
 void anadirAlFinal(struct tipoNodo **primero);
 struct tipoNodo * buscarEnUnaLista(struct tipoNodo *primero, int key);
 void modificarNodo(struct tipoNodo **primero);
-void eliminarLista(struct tipoNodo **primero);
+void eliminarNodo(struct tipoNodo **primero);
 
 void insertarOrdenado(struct tipoNodo **primero);
+void eliminarLista(struct tipoNodo **primero);
+struct tipoNodo * buscarOrdenadoxClave(struct tipoNodo **primero, int keyBuscar);
 
 int main(void) {
     
     struct tipoNodo *primeroMain = NULL; //lista vacía
+    
+    int clave;
     int option;
+    int buscado, key;
     
     
-    printf("\n--------MENÚ--------\n");
+    printf("\n===========MENÚ===========\n");
     printf("\t-1.Añadir un nodo.\n");
     printf("\t-2.Visualizar Lista.\n");
     printf("\t-3.Ver Nº de nodos.\n");
@@ -36,7 +41,10 @@ int main(void) {
     printf("\t-5.Buscar un nodo.\n");
     printf("\t-6.Modificar un nodo.\n");
     printf("\t-7.Eliminar un nodo.\n");
+    printf("\t-8.Eliminar todos los nodos.\n");
     printf("\t-0.Salir\n");
+    printf("=============================\n");
+    
     do {
 
         printf("Introduce una opción: "); scanf("%d", &option);
@@ -65,7 +73,7 @@ int main(void) {
                 
             case 5:
                 //E: Buscar un elemento con una cierta key dentro de la lista.
-                int clave;
+                
                 printf("Introduce la key de nodo que buscas: "); scanf("%d", &clave);
                 struct tipoNodo *encontrado = buscarEnUnaLista(primeroMain, clave);
 
@@ -88,6 +96,21 @@ int main(void) {
 
                 break;
             
+            case 8:
+                
+                break;
+                
+            case 9:
+                
+                printf("Introduce la key: "); scanf("%d", &key);
+                buscado = buscarOrdenadoxClave(primeroMain, key);
+                if (buscado == NULL) {
+                    <#statements#>
+                }
+                
+                break;
+                
+                
             case 0:
                 
                 break;
@@ -209,7 +232,7 @@ void modificarNodo(struct tipoNodo **primero) {
         printf("La key que has introducido no existe."); return;
 }
 
-void eliminarLista(struct tipoNodo **primero) {
+void eliminarNodo(struct tipoNodo **primero) {
 
     /* El objetivo es que el nodo que eliminamos apunte al siguiente de la lista*/
     struct tipoNodo *borrar, *anterior;
@@ -236,4 +259,52 @@ void eliminarLista(struct tipoNodo **primero) {
         anterior->siguiente = borrar->siguiente;
     }
     free(borrar);
+}
+
+void insertarOrdenado(struct tipoNodo **primero) {
+    
+    
+}
+
+void eliminarLista(struct tipoNodo **primero) {
+    
+    struct tipoNodo *borrar, *recorrer = *primero;
+    
+    while (recorrer != NULL) {
+        borrar = recorrer;
+        recorrer = recorrer->siguiente;
+        free(borrar);
+    }
+    *primero = NULL;
+}
+
+struct tipoNodo * buscarOrdenadoxClave(struct tipoNodo *primero, int keyBuscar) {
+    
+    struct tipoNodo *recorrer;
+    recorrer = primero;
+    
+    while (recorrer != NULL && recorrer->informacion.key<keyBuscar) {
+        
+        recorrer = recorrer->siguiente;
+    }
+    if (recorrer == NULL || recorrer->informacion.key != keyBuscar) {
+        return NULL;
+    } else {
+        return recorrer;
+    }
+}
+
+struct tipoNodo * eliminarOrdenadoxClave(struct tipoNodo **primero, int keyBuscar) {
+    
+    struct tipoNodo *borrar, *anterior;
+    
+    borrar = *primero;
+    anterior = NULL;
+    while (borrar != NULL) {
+        anterior
+    }
+    
+    
+    *primero = NULL;
+    
 }
