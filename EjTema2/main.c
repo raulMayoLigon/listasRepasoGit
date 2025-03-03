@@ -20,7 +20,7 @@ struct tipoNodo * buscarEnUnaLista(struct tipoNodo *primero, int key);
 void modificarNodo(struct tipoNodo **primero);
 void eliminarLista(struct tipoNodo **primero);
 
-
+void insertarOrdenado(struct tipoNodo **primero);
 
 int main(void) {
     
@@ -187,6 +187,7 @@ struct tipoNodo * buscarEnUnaLista(struct tipoNodo *primero, int key) {
     recorrer = primero;
 
     while (recorrer != NULL && key != recorrer->informacion.key) {
+        //Tambien se puede hacer un if. y devolver null para comprobar
         recorrer = recorrer->siguiente;
     }
     return recorrer;
